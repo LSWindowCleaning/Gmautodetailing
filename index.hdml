@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GM Auto Detailing</title>
+  <meta
+    name="description"
+    content="Premium mobile auto detailing. Interior, exterior, shampoo, stain removal, polishing, and more."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#top" class="logo">
+        <span class="logo-mark">GM</span>
+        <span class="logo-text">Auto Detailing</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="nav-cta">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Mobile Car Detailing</p>
+          <h1>Make your car look brand new again</h1>
+          <p class="hero-text">
+            Premium interior and exterior auto detailing with attention to every detail.
+            Convenient, professional, and done with care.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Get a Quote</a>
+            <a href="#services" class="btn btn-secondary">View Services</a>
+          </div>
+
+          <div class="hero-badges">
+            <span>Interior Detailing</span>
+            <span>Exterior Wash</span>
+            <span>Mobile Service</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <p class="card-label">Quick Booking</p>
+            <h2>Request your detail</h2>
+            <form id="quoteForm" class="quote-form">
+              <input type="text" id="name" placeholder="Your name" required />
+              <input type="tel" id="phone" placeholder="Phone number" required />
+              <select id="service" required>
+                <option value="">Select a service</option>
+                <option>Interior Detail</option>
+                <option>Exterior Detail</option>
+                <option>Full Detail</option>
+                <option>Seat Shampoo</option>
+                <option>Custom Quote</option>
+              </select>
+              <button type="submit" class="btn btn-primary btn-full">Request Quote</button>
+            </form>
+            <p class="small-note">We’ll get back to you as soon as possible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat">
+          <h3>100%</h3>
+          <p>Attention to detail</p>
+        </div>
+        <div class="stat">
+          <h3>Mobile</h3>
+          <p>We come to you</p>
+        </div>
+        <div class="stat">
+          <h3>Fast</h3>
+          <p>Easy booking process</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2>What we offer</h2>
+          <p>
+            Choose the service that fits your vehicle’s needs. You can adjust wording and pricing.
+          </p>
+        </div>
+
+        <div class="cards three">
+          <article class="card service-card">
+            <div class="icon">🧼</div>
+            <h3>Interior Detailing</h3>
+            <p>
+              Full vacuum, wipe-down, windows, mats, dust removal, and deep interior refresh.
+            </p>
+            <ul>
+              <li>Vacuuming</li>
+              <li>Dashboard + console cleaning</li>
+              <li>Interior glass</li>
+              <li>Floor mats</li>
+            </ul>
+          </article>
+
+          <article class="card service-card">
+            <div class="icon">🚘</div>
+            <h3>Exterior Detailing</h3>
+            <p>
+              Exterior wash and shine to restore a clean, polished finish.
+            </p>
+            <ul>
+              <li>Hand wash</li>
+              <li>Wheel cleaning</li>
+              <li>Tire shine</li>
+              <li>Dry and finish</li>
+            </ul>
+          </article>
+
+          <article class="card service-card">
+            <div class="icon">✨</div>
+            <h3>Full Detail</h3>
+            <p>
+              The complete package for clients who want both interior and exterior done properly.
+            </p>
+            <ul>
+              <li>Inside + outside</li>
+              <li>Deep clean</li>
+              <li>Best value</li>
+              <li>Most popular</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="why-us">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Why choose us</p>
+          <h2>Professional results with a personal touch</h2>
+          <p class="lead">
+            We focus on quality, reliability, and making the process easy from start to finish.
+          </p>
+
+          <div class="check-list">
+            <div>✔ Careful and thorough work</div>
+            <div>✔ Convenient mobile service</div>
+            <div>✔ Friendly and professional</div>
+            <div>✔ Great for regular maintenance or deep cleaning</div>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <h3>What makes us different</h3>
+          <p>
+            We treat every vehicle with care and focus on the details that make the biggest difference.
+          </p>
+          <a href="#contact" class="btn btn-primary">Book a Detail</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Pricing</p>
+          <h2>Simple pricing</h2>
+          <p>Replace these prices with your real ones.</p>
+        </div>
+
+        <div class="cards three pricing-grid">
+          <article class="card price-card">
+            <p class="price-type">Interior</p>
+            <h3>$120</h3>
+            <p>Best for routine interior cleaning.</p>
+            <ul>
+              <li>Vacuum</li>
+              <li>Wipe-down</li>
+              <li>Windows</li>
+              <li>Mats</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary btn-full">Choose Interior</a>
+          </article>
+
+          <article class="card price-card featured">
+            <p class="price-type">Full Detail</p>
+            <h3>$200</h3>
+            <p>Most popular complete service.</p>
+            <ul>
+              <li>Interior + exterior</li>
+              <li>Deep clean</li>
+              <li>Shine finish</li>
+              <li>Best value</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full">Choose Full Detail</a>
+          </article>
+
+          <article class="card price-card">
+            <p class="price-type">Exterior</p>
+            <h3>$90</h3>
+            <p>Great for a clean polished exterior.</p>
+            <ul>
+              <li>Hand wash</li>
+              <li>Wheels</li>
+              <li>Tire shine</li>
+              <li>Dry finish</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary btn-full">Choose Exterior</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Gallery</p>
+          <h2>Recent work</h2>
+          <p>Replace these placeholders with your own photos.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item placeholder-photo">Photo 1</div>
+          <div class="gallery-item placeholder-photo">Photo 2</div>
+          <div class="gallery-item placeholder-photo">Photo 3</div>
+          <div class="gallery-item placeholder-photo">Photo 4</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Reviews</p>
+          <h2>What clients say</h2>
+        </div>
+
+        <div class="cards three">
+          <article class="card review-card">
+            <p>
+              “Amazing job. My car looked so much cleaner inside and out. Super professional.”
+            </p>
+            <strong>- Client Name</strong>
+          </article>
+
+          <article class="card review-card">
+            <p>
+              “Very easy to book and the results were worth it. Would definitely use again.”
+            </p>
+            <strong>- Client Name</strong>
+          </article>
+
+          <article class="card review-card">
+            <p>
+              “They paid attention to details I normally never notice. Highly recommend.”
+            </p>
+            <strong>- Client Name</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <div class="container cta-band-inner">
+        <div>
+          <p class="eyebrow">Ready to book?</p>
+          <h2>Let’s make your car spotless</h2>
+        </div>
+        <a href="#contact" class="btn btn-primary">Request a Quote</a>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Get in touch</h2>
+          <p class="lead">
+            Fill out the form and update the contact info below with Ethan’s details.
+          </p>
+
+          <div class="contact-info">
+            <p><strong>Phone:</strong> <a href="tel:+10000000000">+1 (000) 000-0000</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@gmautodetailing.com">info@gmautodetailing.com</a></p>
+            <p><strong>Service Area:</strong> Your city / surrounding area</p>
+          </div>
+        </div>
+
+        <div class="card contact-card">
+          <form id="contactForm" class="contact-form">
+            <input type="text" id="contactName" placeholder="Full name" required />
+            <input type="email" id="contactEmail" placeholder="Email address" required />
+            <input type="tel" id="contactPhone" placeholder="Phone number" required />
+            <textarea id="contactMessage" rows="5" placeholder="Tell us what your car needs" required></textarea>
+            <button type="submit" class="btn btn-primary btn-full">Send Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>GM Auto Detailing</h3>
+        <p>Professional mobile detailing with quality results.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
