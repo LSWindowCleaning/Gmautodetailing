@@ -1,534 +1,414 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GM Auto Detailing — Premium Mobile Car Detailing</title>
-  <meta
-    name="description"
-    content="GM Auto Detailing — Premium mobile car detailing in Thornhill, Vaughan & surrounding areas. Professional interior & exterior detailing at your doorstep."
-  />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a href="#top" class="brand">
-        <span class="brand-main">GM<span class="dot">.</span></span>
-        <span class="brand-sub">Auto Detailing</span>
-      </a>
 
-      <nav class="desktop-nav">
-        <a href="#services">SERVICES</a>
-        <a href="#about">ABOUT</a>
-        <a href="#why-us">WHY US</a>
-        <a href="#contact">CONTACT</a>
-        <a href="tel:6473955161" class="nav-call">BOOK NOW</a>
-      </nav>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  <!-- ═══ NAV ═══ -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">GM<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Book Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#why-us" class="mobile-link">Why Us</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="#contact" class="mobile-link mobile-cta">Book Now</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Thornhill &amp; Surrounding Areas</div>
+      <h1 class="hero-h1">
+        Premium<br />
+        <em>Detail.</em><br />
+        At Your<br />
+        Doorstep.
+      </h1>
+      <p class="hero-sub">Professional interior &amp; exterior detailing services delivered directly to your home. Attention to every detail.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book Your Detail</a>
+        <a href="#services" class="btn-ghost">Explore Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Mobile</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">1:1</span>
+          <span class="stat-label">Owner Run</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">5★</span>
+          <span class="stat-label">Quality</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section id="services">
+    <div class="section-header">
+      <div class="section-eyebrow">Service Laboratory</div>
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-desc">Each service is tailored to restore and protect your vehicle with precision-grade techniques and products.</p>
     </div>
 
-    <div class="mobile-nav" id="mobileNav">
-      <a href="#services">SERVICES</a>
-      <a href="#about">ABOUT</a>
-      <a href="#why-us">WHY US</a>
-      <a href="#contact">CONTACT</a>
-      <a href="tel:6473955161" class="mobile-call">647-395-5161</a>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-tag">Regular Upkeep</div>
+        <h3 class="service-name">Maintenance Detail</h3>
+        <div class="service-price">$120</div>
+        <p class="service-desc">Perfect for regular upkeep and keeping your car looking fresh.</p>
+        <ul class="service-features">
+          <li>Full interior cleaning &amp; vacuum</li>
+          <li>Surface wipe-down &amp; detailing</li>
+          <li>Exterior wash</li>
+          <li>Tire cleaning</li>
+          <li>Finishing touches</li>
+        </ul>
+        <a href="#contact" class="btn-service">Book This Service</a>
+      </div>
+
+      <div class="service-card service-featured">
+        <div class="service-badge">Best Value</div>
+        <div class="service-tag">Complete Restoration</div>
+        <h3 class="service-name">Premium Full Detail</h3>
+        <div class="service-price">$180 <span>+</span></div>
+        <p class="service-desc">A complete deep clean and restoration for your vehicle.</p>
+        <ul class="service-features">
+          <li>Deep interior cleaning</li>
+          <li>Stain removal &amp; carpet treatment</li>
+          <li>Full exterior wash &amp; detail</li>
+          <li>Paint enhancement (light correction)</li>
+          <li>Detailed finishing &amp; conditioning</li>
+        </ul>
+        <a href="#contact" class="btn-service btn-service-featured">Book This Service</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-tag">Flexible Option</div>
+        <h3 class="service-name">Interior or Exterior Only</h3>
+        <div class="service-price">$70–$90 <span>+</span></div>
+        <p class="service-desc">Flexible option based on your needs — choose interior, exterior, or both.</p>
+        <ul class="service-features">
+          <li>Vacuum &amp; surface cleaning (Interior)</li>
+          <li>Spot treatment (Interior)</li>
+          <li>Wash &amp; tire clean (Exterior)</li>
+          <li>Basic shine (Exterior)</li>
+        </ul>
+        <a href="#contact" class="btn-service">Book This Service</a>
+      </div>
+
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-bg">
-        <img
-          src="https://media.base44.com/images/public/69dfe9048c7d1f3d187b6b6e/dae8edbe1_generated_973a386b.png"
-          alt="Water beading on freshly detailed car surface"
-        />
-        <div class="hero-overlay hero-overlay-left"></div>
-        <div class="hero-overlay hero-overlay-bottom"></div>
+    <!-- Add-ons -->
+    <div class="addons">
+      <div class="addons-header">
+        <div class="addons-warning">⚠ Condition-Based Pricing</div>
+        <p>Assessed on-site to ensure fair pricing and quality results.</p>
       </div>
-
-      <div class="container hero-content">
-        <div class="hero-left reveal">
-          <div class="section-tag left-tag">
-            <span class="line aqua"></span>
-            <span class="mono aqua-text">Mobile Car Detailing</span>
-          </div>
-
-          <h1>
-            Premium<br />
-            Detail<span class="aqua-text">.</span><br />
-            <span class="muted-light">At Your</span><br />
-            <span class="muted-light">Doorstep</span>
-          </h1>
-
-          <p class="hero-text">
-            Professional interior & exterior detailing services delivered directly
-            to your home. Attention to every detail.
-          </p>
-
-          <div class="hero-location">
-            <span class="pin">⌖</span>
-            <span>Thornhill & Surrounding Areas</span>
-          </div>
-
-          <div class="hero-actions">
-            <a href="#services" class="btn btn-aqua">Explore Services</a>
-            <a href="tel:6473955161" class="btn btn-outline">647-395-5161</a>
+      <div class="addons-grid">
+        <div class="addon-item">
+          <div class="addon-icon">🐾</div>
+          <div>
+            <h4>Pet Hair Removal</h4>
+            <p>Deep extraction of embedded pet hair from all surfaces.</p>
           </div>
         </div>
-
-        <div class="hero-right reveal">
-          <div class="status-card">
-            <div class="status-top">
-              <span class="pulse"></span>
-              <span class="mono aqua-text">Now Serving</span>
-            </div>
-
-            <h3>Thornhill & Vaughan</h3>
-            <p>
-              We bring everything needed — water, equipment, and products —
-              directly to your location.
-            </p>
-
-            <div class="status-stats">
-              <div>
-                <strong>100%</strong>
-                <span>Mobile</span>
-              </div>
-              <div>
-                <strong>1:1</strong>
-                <span>Owner Run</span>
-              </div>
-              <div>
-                <strong>5★</strong>
-                <span>Quality</span>
-              </div>
-            </div>
+        <div class="addon-item">
+          <div class="addon-icon">❄</div>
+          <div>
+            <h4>Salt Stain Treatment</h4>
+            <p>Professional removal of winter salt and chemical deposits.</p>
+          </div>
+        </div>
+        <div class="addon-item">
+          <div class="addon-icon">◎</div>
+          <div>
+            <h4>Deep Stain Extraction</h4>
+            <p>Targeted treatment for stubborn stains and discoloration.</p>
+          </div>
+        </div>
+        <div class="addon-item">
+          <div class="addon-icon">⬛</div>
+          <div>
+            <h4>Heavy Dirt Buildup</h4>
+            <p>Intensive cleaning for vehicles with excessive contamination.</p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="scroll-indicator">↓</div>
-    </section>
-
-    <section id="services" class="services section-dark">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="section-tag">
-            <span class="spark">✦</span>
-            <span class="mono aqua-text">Service Laboratory</span>
-          </div>
-          <h2>Our Services</h2>
-          <p>
-            Each service is tailored to restore and protect your vehicle with
-            precision-grade techniques and products.
-          </p>
+  <!-- ═══ BEFORE / AFTER ═══ -->
+  <section id="results">
+    <div class="section-header">
+      <div class="section-eyebrow">The Results</div>
+      <h2 class="section-title">Before &amp; After</h2>
+      <p class="section-desc">Every vehicle, every time.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <div class="ba-visual ba-interior">
+          <div class="ba-label-left">Before</div>
+          <div class="ba-label-right">After</div>
+          <div class="ba-divider-line"></div>
         </div>
-
-        <div class="service-grid">
-          <article class="service-card reveal">
-            <div class="service-image">
-              <img src="https://media.base44.com/images/public/69dfe9048c7d1f3d187b6b6e/ec2fdd62a_generated_449d2cd5.png" alt="Maintenance detail" />
-              <div class="service-gradient"></div>
-              <div class="service-price">$120</div>
-            </div>
-            <div class="service-body">
-              <div class="mini-tag">REGULAR UPKEEP</div>
-              <h3>Maintenance Detail</h3>
-              <p>Perfect for regular upkeep and keeping your car looking fresh.</p>
-              <ul>
-                <li>Full interior cleaning & vacuum</li>
-                <li>Surface wipe-down & detailing</li>
-                <li>Exterior wash</li>
-                <li>Tire cleaning</li>
-                <li>Finishing touches</li>
-              </ul>
-              <a href="tel:6473955161" class="service-link">Book This Service</a>
-            </div>
-          </article>
-
-          <article class="service-card featured reveal">
-            <div class="service-image">
-              <img src="https://media.base44.com/images/public/69dfe9048c7d1f3d187b6b6e/8f1278aeb_generated_e126870b.png" alt="Premium full detail" />
-              <div class="service-gradient"></div>
-              <div class="service-price">$180+</div>
-              <div class="best-badge">Best Value</div>
-            </div>
-            <div class="service-body">
-              <div class="mini-tag">BEST VALUE</div>
-              <h3>Premium Full Detail</h3>
-              <p>A complete deep clean and restoration for your vehicle.</p>
-              <ul>
-                <li>Deep interior cleaning</li>
-                <li>Stain removal & carpet treatment</li>
-                <li>Full exterior wash & detail</li>
-                <li>Paint enhancement (light correction)</li>
-                <li>Detailed finishing & conditioning</li>
-              </ul>
-              <a href="tel:6473955161" class="service-link">Book This Service</a>
-            </div>
-          </article>
-
-          <article class="service-card reveal">
-            <div class="service-image">
-              <img src="https://media.base44.com/images/public/69dfe9048c7d1f3d187b6b6e/428d44f83_generated_5f86311b.png" alt="Interior or exterior only" />
-              <div class="service-gradient"></div>
-              <div class="service-price">$70–$90+</div>
-            </div>
-            <div class="service-body">
-              <div class="mini-tag">FLEXIBLE OPTION</div>
-              <h3>Interior OR Exterior Only</h3>
-              <p>Flexible option based on your needs — choose interior, exterior, or both.</p>
-              <ul>
-                <li>Vacuum & surface cleaning (Interior)</li>
-                <li>Spot treatment (Interior)</li>
-                <li>Wash & tire clean (Exterior)</li>
-                <li>Basic shine (Exterior)</li>
-              </ul>
-              <a href="tel:6473955161" class="service-link">Book This Service</a>
-            </div>
-          </article>
-        </div>
+        <p class="ba-caption">Interior Deep Clean</p>
       </div>
-    </section>
-
-    <section id="results" class="before-after section-dark bordered-top">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="section-tag">
-            <span class="line aqua"></span>
-            <span class="mono aqua-text">The Results</span>
-          </div>
-          <h2>Before & After</h2>
-          <p>
-            Drag the slider to reveal the transformation. Every vehicle, every time.
-          </p>
+      <div class="ba-card">
+        <div class="ba-visual ba-exterior">
+          <div class="ba-label-left">Before</div>
+          <div class="ba-label-right">After</div>
+          <div class="ba-divider-line"></div>
         </div>
-
-        <div class="ba-grid">
-          <div class="ba-card reveal">
-            <div class="ba-slider" data-slider>
-              <img class="ba-after" src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=1200&q=80" alt="Interior deep clean after">
-              <div class="ba-before-wrap" style="width:50%">
-                <img class="ba-before" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80" alt="Interior deep clean before">
-              </div>
-              <div class="ba-divider" style="left:50%">
-                <button class="ba-handle" aria-label="Drag slider"></button>
-              </div>
-              <span class="ba-label left">Before</span>
-              <span class="ba-label right">After</span>
-            </div>
-            <div class="ba-title">Interior Deep Clean</div>
-          </div>
-
-          <div class="ba-card reveal">
-            <div class="ba-slider" data-slider>
-              <img class="ba-after" src="https://images.unsplash.com/photo-1600298882525-521e1b5e13d4?w=1200&q=80" alt="Exterior detail after">
-              <div class="ba-before-wrap" style="width:50%">
-                <img class="ba-before" src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?w=1200&q=80" alt="Exterior detail before">
-              </div>
-              <div class="ba-divider" style="left:50%">
-                <button class="ba-handle" aria-label="Drag slider"></button>
-              </div>
-              <span class="ba-label left">Before</span>
-              <span class="ba-label right">After</span>
-            </div>
-            <div class="ba-title">Exterior Wash & Detail</div>
-          </div>
-
-          <div class="ba-card reveal">
-            <div class="ba-slider" data-slider>
-              <img class="ba-after" src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=1200&q=80" alt="Wheel clean after">
-              <div class="ba-before-wrap" style="width:50%">
-                <img class="ba-before" src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=1200&q=80" alt="Wheel clean before">
-              </div>
-              <div class="ba-divider" style="left:50%">
-                <button class="ba-handle" aria-label="Drag slider"></button>
-              </div>
-              <span class="ba-label left">Before</span>
-              <span class="ba-label right">After</span>
-            </div>
-            <div class="ba-title">Wheel & Tire Clean</div>
-          </div>
-        </div>
+        <p class="ba-caption">Exterior Wash &amp; Detail</p>
       </div>
-    </section>
-
-    <section class="addons section-dark bordered-top">
-      <div class="container split">
-        <div class="reveal">
-          <div class="addon-image-wrap">
-            <img
-              src="https://media.base44.com/images/public/69dfe9048c7d1f3d187b6b6e/1c56f2565_generated_d5f43c6d.png"
-              alt="Before and after detailing comparison showing salt removal"
-            />
-            <div class="addon-overlay-card">
-              <div class="section-tag left-tag">
-                <span class="warn">⚠</span>
-                <span class="mono aqua-text">Condition-Based Pricing</span>
-              </div>
-              <p>Assessed on-site to ensure fair pricing and quality results.</p>
-            </div>
-          </div>
+      <div class="ba-card">
+        <div class="ba-visual ba-wheel">
+          <div class="ba-label-left">Before</div>
+          <div class="ba-label-right">After</div>
+          <div class="ba-divider-line"></div>
         </div>
-
-        <div class="reveal">
-          <div class="section-tag left-tag">
-            <span class="line aqua"></span>
-            <span class="mono aqua-text">Add-Ons</span>
-          </div>
-          <h2 class="left-align">Additional Services</h2>
-          <p class="left-copy">
-            Some vehicles require extra attention. These services are assessed on-site based on vehicle condition.
-          </p>
-
-          <div class="addon-grid">
-            <div class="addon-box">
-              <h4>Pet Hair Removal</h4>
-              <p>Deep extraction of embedded pet hair from all surfaces.</p>
-            </div>
-            <div class="addon-box">
-              <h4>Salt Stain Treatment</h4>
-              <p>Professional removal of winter salt and chemical deposits.</p>
-            </div>
-            <div class="addon-box">
-              <h4>Deep Stain Extraction</h4>
-              <p>Targeted treatment for stubborn stains and discoloration.</p>
-            </div>
-            <div class="addon-box">
-              <h4>Heavy Dirt Buildup</h4>
-              <p>Intensive cleaning for vehicles with excessive contamination.</p>
-            </div>
-          </div>
-        </div>
+        <p class="ba-caption">Wheel &amp; Tire Clean</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="about" class="about section-light">
-      <div class="container split about-split">
-        <div class="reveal">
-          <div class="section-tag left-tag dark-tag">
-            <span class="line dark"></span>
-            <span class="mono dark-text-soft">About Us</span>
-          </div>
-
-          <h2 class="dark-heading left-align">
-            Built on<br />
-            Precision<span class="aqua-text">.</span>
-          </h2>
-
-          <p class="dark-copy">
-            GM Auto Detailing is a fully mobile car detailing service focused on delivering high-quality, professional results directly at the client's location.
-          </p>
-          <p class="dark-copy">
-            Built on consistency, attention to detail, and a strong work ethic, every vehicle is treated with care and precision.
-          </p>
-
-          <div class="about-stats">
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <div class="section-eyebrow">About Us</div>
+        <h2 class="section-title">Built on<br /><em>Precision.</em></h2>
+        <p>GM Auto Detailing is a fully mobile car detailing service focused on delivering high-quality, professional results directly at the client's location.</p>
+        <p>Built on consistency, attention to detail, and a strong work ethic, every vehicle is treated with care and precision.</p>
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-dot"></div>
             <div>
-              <strong>Owner Operated</strong>
-              <span>Direct service, no outsourcing</span>
+              <h4>Owner Operated</h4>
+              <p>Direct service, no outsourcing</p>
             </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-dot"></div>
             <div>
-              <strong>Safe Methods</strong>
-              <span>Proper techniques always</span>
+              <h4>Safe Methods</h4>
+              <p>Proper techniques always</p>
             </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-dot"></div>
             <div>
-              <strong>Premium Grade</strong>
-              <span>Professional-grade products</span>
+              <h4>Premium Grade</h4>
+              <p>Professional-grade products</p>
             </div>
           </div>
         </div>
+      </div>
+      <div class="about-quote-block">
+        <div class="quote-marks">"</div>
+        <blockquote>Every vehicle is treated with the same level of attention as if it were my own.</blockquote>
+        <cite>— GM Auto Detailing</cite>
+      </div>
+    </div>
+  </section>
 
-        <div class="reveal image-side">
-          <div class="about-image">
-            <img
-              src="https://media.base44.com/images/public/69dfe9048c7d1f3d187b6b6e/0748839c5_generated_f6400a75.png"
-              alt="Microfiber cloth detailing a car surface with precision"
-            />
-          </div>
-          <div class="promise-card">
-            <div class="mono aqua-text small-title">Our Promise</div>
-            <p>"Every vehicle is treated with the same level of attention as if it were my own."</p>
-            <span>— GM Auto Detailing</span>
-          </div>
+  <!-- ═══ WHY US ═══ -->
+  <section id="why-us">
+    <div class="section-header">
+      <div class="section-eyebrow">The Difference</div>
+      <h2 class="section-title">Why Choose Us</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <h3>Fully Mobile</h3>
+        <p>We come to your home or workplace with everything needed.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <h3>Professional-Grade</h3>
+        <p>Premium products and equipment for superior results.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <h3>Attention to Detail</h3>
+        <p>We catch what most services miss, every time.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <h3>Owner Operated</h3>
+        <p>Direct service from the owner — no outsourcing.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">05</div>
+        <h3>Reliable &amp; Punctual</h3>
+        <p>Consistent timing and dependable communication.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">06</div>
+        <h3>Customer First</h3>
+        <p>Your satisfaction is guaranteed, always.</p>
+      </div>
+    </div>
+    <div class="who-we-serve">
+      <div class="section-eyebrow" style="text-align:center; margin-bottom:1.5rem;">Who We Serve</div>
+      <div class="serve-tags">
+        <span>Homeowners &amp; Families</span>
+        <span>Busy Professionals</span>
+        <span>Car Enthusiasts</span>
+        <span>Business Vehicle Owners</span>
+        <span>Quality-First Clients</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT / BOOKING ═══ -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <div class="section-eyebrow">Booking</div>
+        <h2 class="section-title">Book Your<br /><em>Detail.</em></h2>
+        <p>Flexible scheduling available based on your availability. We work around your schedule — at home or workplace.</p>
+        <div class="contact-methods">
+          <a href="tel:6473955161" class="contact-method">
+            <div class="contact-method-icon">☎</div>
+            <div>
+              <div class="contact-method-label">Call or Text</div>
+              <div class="contact-method-value">647-395-5161</div>
+            </div>
+          </a>
+          <a href="mailto:gmautodetailing23@gmail.com" class="contact-method">
+            <div class="contact-method-icon">✉</div>
+            <div>
+              <div class="contact-method-label">Email</div>
+              <div class="contact-method-value">gmautodetailing23@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://instagram.com/gm_autodetailing2023" target="_blank" class="contact-method">
+            <div class="contact-method-icon">◎</div>
+            <div>
+              <div class="contact-method-label">Instagram</div>
+              <div class="contact-method-value">@gm_autodetailing2023</div>
+            </div>
+          </a>
+        </div>
+        <div class="service-area-badge">
+          <div class="area-dot"></div>
+          Currently Serving: Thornhill, Vaughan &amp; Surrounding Areas
         </div>
       </div>
-    </section>
-
-    <section id="why-us" class="why-us section-silver">
-      <div class="container">
-        <div class="section-head center dark reveal">
-          <div class="section-tag center-tag dark-tag">
-            <span class="line dark"></span>
-            <span class="mono dark-text-soft">The Difference</span>
-            <span class="line dark"></span>
+      <div class="contact-form-block">
+        <h3>Get a Quote</h3>
+        <form id="bookingForm" class="booking-form">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Smith" required />
           </div>
-          <h2 class="dark-heading">Why Choose Us</h2>
-        </div>
-
-        <div class="reason-grid">
-          <div class="reason-card reveal"><h3>Fully Mobile</h3><p>We come to your home or workplace with everything needed.</p></div>
-          <div class="reason-card reveal"><h3>Professional-Grade</h3><p>Premium products and equipment for superior results.</p></div>
-          <div class="reason-card reveal"><h3>Attention to Detail</h3><p>We catch what most services miss, every time.</p></div>
-          <div class="reason-card reveal"><h3>Owner Operated</h3><p>Direct service from the owner — no outsourcing.</p></div>
-          <div class="reason-card reveal"><h3>Reliable & Punctual</h3><p>Consistent timing and dependable communication.</p></div>
-          <div class="reason-card reveal"><h3>Customer First</h3><p>Your satisfaction is guaranteed, always.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="who-we-serve section-dark bordered-y">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="mono aqua-text">Who We Serve</span>
-        </div>
-
-        <div class="serve-wrap">
-          <div class="serve-pill reveal">Homeowners & Families</div>
-          <div class="serve-pill reveal">Busy Professionals</div>
-          <div class="serve-pill reveal">Car Enthusiasts</div>
-          <div class="serve-pill reveal">Business Vehicle Owners</div>
-          <div class="serve-pill reveal">Quality-First Clients</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact section-light">
-      <div class="container split contact-split">
-        <div class="reveal">
-          <div class="section-tag left-tag dark-tag">
-            <span class="line dark"></span>
-            <span class="mono dark-text-soft">Booking</span>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="647-000-0000" required />
           </div>
-
-          <h2 class="dark-heading left-align">
-            Book Your<br />
-            Detail<span class="aqua-text">.</span>
-          </h2>
-
-          <p class="dark-copy contact-copy">
-            Flexible scheduling available based on your availability. We work around your schedule — at home or workplace.
-          </p>
-
-          <div class="contact-cards">
-            <a href="tel:6473955161" class="contact-card primary">
-              <div class="contact-icon">☎</div>
-              <div>
-                <span>Call or Text</span>
-                <strong>647-395-5161</strong>
-              </div>
-            </a>
-
-            <a href="mailto:gmautodetailing23@gmail.com" class="contact-card">
-              <div class="contact-icon">✉</div>
-              <div>
-                <span>Email</span>
-                <strong>gmautodetailing23@gmail.com</strong>
-              </div>
-            </a>
-
-            <a href="https://instagram.com/gm_autodetailing2023" target="_blank" rel="noopener noreferrer" class="contact-card">
-              <div class="contact-icon">◎</div>
-              <div>
-                <span>Instagram</span>
-                <strong>@gm_autodetailing2023</strong>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="reveal side-cards">
-          <div class="side-card dark">
-            <div class="mono aqua-text">Service Area</div>
-            <h3>Thornhill, Vaughan<br><span>& Surrounding Areas</span></h3>
-            <p>
-              We bring everything needed — water, equipment, and products —
-              directly to your location. No setup required on your end.
-            </p>
-            <div class="live-dot-wrap">
-              <span class="pulse"></span>
-              <span class="mono aqua-text soft">Currently Serving This Area</span>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Service</label>
+              <select>
+                <option>Maintenance Detail — $120</option>
+                <option>Premium Full Detail — $180+</option>
+                <option>Interior Only — $70+</option>
+                <option>Exterior Only — $90+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Vehicle Type</label>
+              <select>
+                <option>Sedan</option>
+                <option>SUV / Truck</option>
+                <option>Van / Minivan</option>
+                <option>Other</option>
+              </select>
             </div>
           </div>
-
-          <div class="side-card light">
-            <div class="mono dark-text-soft">Scheduling</div>
-            <p>
-              Flexible scheduling available. We work around your schedule —
-              whether at home or your workplace.
-            </p>
-            <a href="tel:6473955161" class="btn btn-aqua full">Secure Your Slot</a>
+          <div class="form-group">
+            <label>Message (optional)</label>
+            <textarea placeholder="Any special requests or notes..."></textarea>
           </div>
-        </div>
+          <button type="submit" class="btn-primary btn-full">Send Booking Request</button>
+        </form>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-inner">
       <div class="footer-brand">
-        <div class="brand footer-brand-line">
-          <span class="brand-main">GM<span class="dot">.</span></span>
-          <span class="brand-sub">Auto Detailing</span>
-        </div>
-        <p>
-          Premium mobile car detailing services delivered directly to your
-          doorstep. Thornhill, Vaughan, and surrounding areas.
-        </p>
+        <div class="nav-logo" style="font-size:2rem; margin-bottom:0.75rem;">GM<span style="color:var(--gold)">.</span></div>
+        <p>Premium mobile car detailing services delivered directly to your doorstep. Thornhill, Vaughan, and surrounding areas.</p>
       </div>
-
-      <div>
-        <div class="footer-title">Navigation</div>
-        <div class="footer-links">
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#why-us">Why Us</a>
-          <a href="#contact">Contact</a>
-        </div>
+      <div class="footer-nav">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-
-      <div>
-        <div class="footer-title">Contact</div>
-        <div class="footer-links">
-          <a href="tel:6473955161">647-395-5161</a>
-          <a href="mailto:gmautodetailing23@gmail.com">Email Us</a>
-          <a href="https://instagram.com/gm_autodetailing2023" target="_blank" rel="noopener noreferrer">@gm_autodetailing2023</a>
-          <span>Thornhill & Vaughan</span>
-        </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:6473955161">647-395-5161</a></li>
+          <li><a href="mailto:gmautodetailing23@gmail.com">Email Us</a></li>
+          <li><a href="https://instagram.com/gm_autodetailing2023" target="_blank">@gm_autodetailing2023</a></li>
+          <li>Thornhill &amp; Vaughan</li>
+        </ul>
       </div>
     </div>
-
-    <div class="container footer-bottom">
-      <p>© <span id="year"></span> GM Auto Detailing. All rights reserved.</p>
-      <p>Premium Mobile Detailing</p>
+    <div class="footer-bottom">
+      <p>© 2026 GM Auto Detailing. All rights reserved.</p>
     </div>
   </footer>
-
-  <div class="concierge-bar" id="conciergeBar">
-    <div class="container concierge-inner">
-      <div class="concierge-left">
-        <span class="pulse"></span>
-        <span class="mono">Serving Thornhill Today</span>
-      </div>
-      <div class="concierge-actions">
-        <a href="tel:6473955161" class="btn btn-aqua mini">Call Now</a>
-        <a href="sms:6473955161" class="btn btn-outline mini">Text Us</a>
-      </div>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
