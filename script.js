@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const CALENDLY_BASE_URL = "https://calendly.com/ethangrin0/gm-auto-detailing";
+
   const header = document.getElementById("navbar");
   const menuToggle = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
@@ -7,8 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const sectionLinks = document.querySelectorAll('.desktop-nav a[href^="#"]');
   const bookingForm = document.getElementById("bookingForm");
   const formNote = document.getElementById("formNote");
+  const phoneInput = document.getElementById("phone");
 
   function updateHeaderState() {
+    if (!header) return;
     if (window.scrollY > 20) {
       header.classList.add("scrolled");
     } else {
@@ -35,42 +39,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-
-  revealEls.forEach((el) => revealObserver.observe(el));
-
-  const sections = document.querySelectorAll("main section[id]");
-
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-
-        sectionLinks.forEach((link) => {
-          link.classList.toggle(
-            "active",
-            link.getAttribute("href") === `#${entry.target.id}`
-          );
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
         });
-      });
-    },
-    {
-      threshold: 0.45,
-      rootMargin: "-10% 0px -35% 0px"
-    }
-  );
+      },
+      { threshold: 0.12 }
+    );
 
-  sections.forEach((section) => sectionObserver.observe(section));
+    revealEls.forEach((el) => revealObserver.observe(el));
+
+    const sections = document.querySelectorAll("main section[id]");
+
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          sectionLinks.forEach((link) => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") === `#${entry.target.id}`
+            );
+          });
+        });
+      },
+      {
+        threshold: 0.45,
+        rootMargin: "-10% 0px -35% 0px"
+      }
+    );
+
+    sections.forEach((section) => sectionObserver.observe(section));
+  } else {
+    revealEls.forEach((el) => el.classList.add("visible"));
+  }
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (event) => {
@@ -93,37 +101,78 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  function digitsOnly(value) {
+    return value.replace(/\D/g, "");
+  }
+
+  function formatPhoneDisplay(value) {
+    const digits = digitsOnly(value).slice(0, 10);
+
+    if (digits.length <= 3) return digits;
+    if (digits.length <= 6) return `${digits.slice(0, 3)} ${digits.slice(3)}`;
+    return `${digits.slice(0, 3)} ${digits.slice(3, 6)} ${digits.slice(6)}`;
+  }
+
+  function getFullPhoneNumber() {
+    const localDigits = digitsOnly(phoneInput?.value || "").slice(0, 10);
+    return localDigits ? `+1${localDigits}` : "";
+  }
+
+  if (phoneInput) {
+    phoneInput.addEventListener("input", () => {
+      phoneInput.value = formatPhoneDisplay(phoneInput.value);
+    });
+
+    phoneInput.addEventListener("keydown", (event) => {
+      const allowedKeys = [
+        "Backspace",
+        "Delete",
+        "ArrowLeft",
+        "ArrowRight",
+        "Tab",
+        "Home",
+        "End"
+      ];
+
+      if (allowedKeys.includes(event.key)) return;
+      if (/^\d$/.test(event.key)) return;
+
+      event.preventDefault();
+    });
+  }
+
   if (bookingForm) {
     bookingForm.addEventListener("submit", (event) => {
       event.preventDefault();
 
       const name = document.getElementById("name")?.value.trim() || "";
-      const phone = document.getElementById("phone")?.value.trim() || "";
+      const email = document.getElementById("email")?.value.trim() || "";
+      const phone = getFullPhoneNumber();
       const service = document.getElementById("service")?.value.trim() || "";
       const vehicle = document.getElementById("vehicle")?.value.trim() || "";
       const message = document.getElementById("message")?.value.trim() || "";
 
-      const subject = encodeURIComponent("Booking Request - GM Auto Detailing");
-      const body = encodeURIComponent(
-        `Name: ${name}\n` +
-          `Phone: ${phone}\n` +
-          `Service: ${service}\n` +
-          `Vehicle Type: ${vehicle}\n` +
-          `Message: ${message || "N/A"}`
-      );
-
-      if (formNote) {
-        formNote.textContent = "Opening your email app...";
+      if (!name || !email || !phone || !service || !vehicle) {
+        if (formNote) {
+          formNote.textContent = "Please fill in all required fields first.";
+        }
+        return;
       }
 
-      window.location.href = `mailto:gmautodetailing23@gmail.com?subject=${subject}&body=${body}`;
+      const params = new URLSearchParams({
+        name,
+        email,
+        a1: phone,
+        a2: service,
+        a3: vehicle,
+        a4: message || "N/A"
+      });
 
-      setTimeout(() => {
-        if (formNote) {
-          formNote.textContent =
-            "If no email window opened, email gmautodetailing23@gmail.com directly.";
-        }
-      }, 1200);
+      if (formNote) {
+        formNote.textContent = "Opening booking page...";
+      }
+
+      window.location.href = `${CALENDLY_BASE_URL}?${params.toString()}`;
     });
   }
 });
