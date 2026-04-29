@@ -151,22 +151,24 @@ document.addEventListener("DOMContentLoaded", () => {
       const service = document.getElementById("service")?.value.trim() || "";
       const vehicle = document.getElementById("vehicle")?.value.trim() || "";
       const message = document.getElementById("message")?.value.trim() || "";
+      const address = document.getElementById("address")?.value.trim() || "";
 
-      if (!name || !email || !phone || !service || !vehicle) {
+     if (!name || !email || !phone || !address || !service || !vehicle) {
         if (formNote) {
           formNote.textContent = "Please fill in all required fields first.";
         }
         return;
       }
 
-      const params = new URLSearchParams({
-        name,
-        email,
-        a1: phone,
-        a2: service,
-        a3: vehicle,
-        a4: message || "N/A"
-      });
+     const params = new URLSearchParams({
+  name,
+  email,
+  a1: phone,
+  a2: address,
+  a3: service,
+  a4: vehicle,
+  a5: message || "N/A"
+});
 
       if (formNote) {
         formNote.textContent = "Opening booking page...";
